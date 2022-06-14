@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.2.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>Tsimen1.0-EngineeringHandbook - CharlesYu</title>
+
+  
+    <meta name="description" content="计蒙 1.0 工程手册：现场施工、维护...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tsimen1.0-EngineeringHandbook">
+<meta property="og:url" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/index.html">
+<meta property="og:site_name" content="CharlesYu">
+<meta property="og:description" content="计蒙 1.0 工程手册：现场施工、维护...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/RaspberrySystem_2022-05-16_21-16-45.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/OpenTerminal_2022-05-17_18-02-42.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Log_2022-05-16_21-18-45.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/logls_2022-05-18_15-15-33.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/StrimLog_2022-05-17_17-58-49.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Python_2022-05-17_18-06-45.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/KillProgram_2022-05-17_23-00-25.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Start_2022-05-17_23-02-25.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/DataFold_2022-05-18_17-24-00.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/U_2022-05-18_17-26-37.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/FindU_2022-05-18_17-28-00.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/NewFolder_2022-05-18_17-29-35.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Files_2022-05-18_17-47-11.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Status_2022-06-06_16-42-25.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Rs485LampChange_2022-05-18_14-13-22.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/RaspberryLampChange_2022-05-18_14-15-43.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Ls[]_2022-06-14_15-59-44.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Cd[]_2022-06-14_16-10-55.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Tail[]_2022-06-14_16-21-40.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Cp[1]_2022-06-14_16-41-22.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Cp[2]_2022-06-14_16-42-31.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Mkdir[]_2022-06-14_16-53-43.png">
+<meta property="og:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/Pwd[]_2022-06-14_16-57-26.png">
+<meta property="article:published_time" content="2022-06-14T06:19:56.000Z">
+<meta property="article:modified_time" content="2022-06-14T09:13:47.080Z">
+<meta property="article:author" content="HaoYu Liu">
+<meta property="article:tag" content="计蒙">
+<meta property="article:tag" content="工程手册">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2022/06/14/Tsimen1-0-EngineeringHandbook/RaspberrySystem_2022-05-16_21-16-45.png">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/img/Sunflower&GirlRound.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">CharlesYu</div><div class="sub cap">Yu Blog</div></a></div>
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/notes">随笔</a><a class="nav-item" href="/about/">关于</a></nav></header>
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%AE%A1%E8%92%99%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81"><span class="toc-text">查看计蒙运行状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E4%B8%8A%E4%BD%8D%E6%9C%BA%EF%BC%88%E6%95%B0%E9%87%87%E4%BB%AA%EF%BC%89%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81"><span class="toc-text">查看上位机（数采仪）程序运行状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%97%AD-x2F-%E5%BC%80%E5%90%AF%E4%B8%8A%E4%BD%8D%E6%9C%BA%EF%BC%88%E6%95%B0%E9%87%87%E4%BB%AA%EF%BC%89%E7%A8%8B%E5%BA%8F"><span class="toc-text">关闭&#x2F;开启上位机（数采仪）程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8U%E7%9B%98%EF%BC%88%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%EF%BC%89%E6%8B%B7%E8%B4%9D%E6%95%B0%E6%8D%AE"><span class="toc-text">使用U盘（移动硬盘）拷贝数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E8%92%99%E2%80%94%E2%80%94%E6%95%B0%E9%87%87%E4%BB%AA%E6%AE%B5%E6%8E%A5%E7%BA%BF%E9%A2%9C%E8%89%B2%E5%8F%8A%E5%9B%9B%E6%A0%B9%E7%BA%BF%E5%AF%B9%E5%BA%94%E7%9A%84%E5%90%AB%E4%B9%89"><span class="toc-text">计蒙——数采仪段接线颜色及四根线对应的含义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E9%87%87%E4%BB%AA%E5%86%85%E9%83%A8%E5%B7%A5%E4%BD%9C%E6%8C%87%E7%A4%BA%E7%81%AF"><span class="toc-text">数采仪内部工作指示灯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8C%87%E4%BB%A4-%E2%80%93%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD"><span class="toc-text">树莓派常用的指令 –持续更新中</span></a></li></ol></div></div></div>
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Tsimen1-0/">Tsimen1.0</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-06-14T06:19:56.000Z">2022-06-14</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>Tsimen1.0-EngineeringHandbook</span></h1>
+<blockquote>
+<p>此文章仅用于 Tsimen1.0 查看系统运行状态、下载数据、接线、查看指示灯等使用。</p>
+</blockquote>
+<details class="tag-plugin folding" ><summary><span>数据文件夹路径</span></summary><div class="body"><p>最新版本数据存放路径<br><mark class="tag-plugin mark" >home&#x2F;pi&#x2F;tsimen-device&#x2F;py&#x2F;data</mark><br><br><br>宁江设备数据存放路径<br><mark class="tag-plugin mark" >home&#x2F;pi&#x2F;.tsimen-device&#x2F;py&#x2F;data</mark></p></div></details>
+
+
+<h2 id="查看计蒙运行状态"><a href="#查看计蒙运行状态" class="headerlink" title="查看计蒙运行状态"></a>查看计蒙运行状态</h2><div class="tag-plugin tabs" align=""id="tab_1""><ul class="nav-tabs"><li class="tab active"><a href="#tab_1-1">第一步</a></li><li class="tab"><a href="#tab_1-2">第二步</a></li><li class="tab"><a href="#tab_1-3">第三步</a></li><li class="tab"><a href="#tab_1-4">第四步</a></li><li class="tab"><a href="#tab_1-5">第五步</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_1-1"><p>点亮树莓派屏幕。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="RaspberrySystem_2022-05-16_21-16-45.png" alt="OpenSystem"/></div><div class="image-meta"><span class="image-caption center">OpenSystem</span></div></div></div><div class="tab-pane" id="tab_1-2"><p>点击菜单栏终端按钮，打开命令行终端。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="OpenTerminal_2022-05-17_18-02-42.png" alt="OpenTerminal"/></div><div class="image-meta"><span class="image-caption center">OpenTerminal</span></div></div></div><div class="tab-pane" id="tab_1-3"><p>在弹出的终端窗口中进入如下路径：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#进入日志文件夹</span></span><br><span class="line">  cd tsimen-device/py/data/log</span><br><span class="line"></span><br><span class="line"><span class="section">#宁江设备请使用如下指令进入日志文件夹</span></span><br><span class="line">  cd .tsimen-device/py/data/log </span><br></pre></td></tr></table></figure>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Log_2022-05-16_21-18-45.png" alt="Log"/></div><div class="image-meta"><span class="image-caption center">Log</span></div></div></div><div class="tab-pane" id="tab_1-4"><p>检查<strong>当前路径</strong>（蓝色字段即为当前路径）无误后，输入：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#查看日志文件夹下所有内容</span></span><br><span class="line">  ls</span><br></pre></td></tr></table></figure>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="logls_2022-05-18_15-15-33.png" alt="LogCheck"/></div><div class="image-meta"><span class="image-caption center">LogCheck</span></div></div></div><div class="tab-pane" id="tab_1-5"><p>记住最新日期的日志文件，输入：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#实时查看最新的日志文件</span></span><br><span class="line">  tail -f 日志文件名</span><br></pre></td></tr></table></figure>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="StrimLog_2022-05-17_17-58-49.png" alt="Stream"/></div><div class="image-meta"><span class="image-caption center">Stream</span></div></div></div></div></div>
+
+
+<h2 id="查看上位机（数采仪）程序运行状态"><a href="#查看上位机（数采仪）程序运行状态" class="headerlink" title="查看上位机（数采仪）程序运行状态"></a>查看上位机（数采仪）程序运行状态</h2><p>在终端窗口中输入 pgrep python ：如果程序正常运行将显示一串随机整数；否则将  什么都不显示。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pgrep python</span><br><span class="line"></span><br><span class="line"><span class="section">#显示内容为数字</span></span><br></pre></td></tr></table></figure>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Python_2022-05-17_18-06-45.png" alt="Status"/></div><div class="image-meta"><span class="image-caption center">Status</span></div></div>
+
+
+<h2 id="关闭-x2F-开启上位机（数采仪）程序"><a href="#关闭-x2F-开启上位机（数采仪）程序" class="headerlink" title="关闭&#x2F;开启上位机（数采仪）程序"></a>关闭&#x2F;开启上位机（数采仪）程序</h2><div class="tag-plugin tabs" align="center"id="tab_2""><ul class="nav-tabs"><li class="tab active"><a href="#tab_2-1">关闭</a></li><li class="tab"><a href="#tab_2-2">开启</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_2-1"><p>查看到上位机程序状态后，记住显示的整数串，输入如下指令强制关闭程序：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo kill -9 1225</span><br><span class="line"><span class="section">#1225 为对应显示的整数串</span></span><br></pre></td></tr></table></figure>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="KillProgram_2022-05-17_23-00-25.png" alt="Kill"/></div><div class="image-meta"><span class="image-caption center">Kill</span></div></div></div><div class="tab-pane" id="tab_2-2"><p>输入如下指令开启程序：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo python3 /home/pi/tsimen-device/py/run.py &amp;</span><br></pre></td></tr></table></figure>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Start_2022-05-17_23-02-25.png" alt="Start"/></div><div class="image-meta"><span class="image-caption center">Start</span></div></div></div></div></div>
+
+
+<h2 id="使用U盘（移动硬盘）拷贝数据"><a href="#使用U盘（移动硬盘）拷贝数据" class="headerlink" title="使用U盘（移动硬盘）拷贝数据"></a>使用U盘（移动硬盘）拷贝数据</h2><div class="tag-plugin tabs" align="center"id="tab_3""><ul class="nav-tabs"><li class="tab active"><a href="#tab_3-1">第一步</a></li><li class="tab"><a href="#tab_3-2">第二步</a></li><li class="tab"><a href="#tab_3-3">第三步</a></li><li class="tab"><a href="#tab_3-4">第四步</a></li><li class="tab"><a href="#tab_3-5">第五步</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_3-1"><p>进入数据文件夹，并查看数据文件夹路径(终端窗口请不要关闭）：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#进入数据文件夹</span></span><br><span class="line">  cd /home/pi/tsimen-device/py/data/raw<span class="emphasis">_data/  #这里的路径为绝对路径</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">#查看数据文件夹的路径</span></span><br><span class="line"><span class="emphasis">  pwd</span></span><br></pre></td></tr></table></figure>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="DataFold_2022-05-18_17-24-00.png" alt="DataFold"/></div><div class="image-meta"><span class="image-caption center">DataFold</span></div></div></div><div class="tab-pane" id="tab_3-2"><p>请准备一个U盘，将U盘通过USB口插入树莓派：</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="U_2022-05-18_17-26-37.png" alt="U盘"/></div><div class="image-meta"><span class="image-caption center">U盘</span></div></div></div><div class="tab-pane" id="tab_3-3"><p>等待半分钟左右，重新打开一个新的终端窗口，查看是否接入U盘：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#进入外设文件夹</span></span><br><span class="line">  cd /media/pi</span><br><span class="line"></span><br><span class="line"><span class="section">#查看U盘是否接入</span></span><br><span class="line">  ls  #查看是有你的U盘名字</span><br></pre></td></tr></table></figure>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="FindU_2022-05-18_17-28-00.png" alt="FindU"/></div><div class="image-meta"><span class="image-caption center">FindU</span></div></div></div><div class="tab-pane" id="tab_3-4"><p>如果没有显示U盘名字，请重复 2 3 步骤；<br>如果显示U盘名字，进入U盘后新建一个文件夹，并自行重命名(例如：时间-地点-Data，2022-05-18-changqing-Data)</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#进入U盘文件夹</span></span><br><span class="line">  cd #U盘名字</span><br><span class="line"></span><br><span class="line"><span class="section">#新建文件夹（用于存放拷贝数据）</span></span><br><span class="line">  mkdir #文件夹名字（例：2022-05-18-changqing-Data）</span><br></pre></td></tr></table></figure>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="NewFolder_2022-05-18_17-29-35.png" alt="NewFolder"/></div><div class="image-meta"><span class="image-caption center">NewFolder</span></div></div></div><div class="tab-pane" id="tab_3-5"><p>进入新建的文件夹后，将所需要的数据文件拷贝至此文件夹中：(例如：拷贝2022-05-18-17点的所有数据文件)</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#拷贝文件</span></span><br><span class="line">  cp -r /home/pi/tsimen-device/py/data/raw<span class="emphasis">_data/2022-05-18/raw_</span>2022-05-18-17<span class="emphasis">* ./</span></span><br></pre></td></tr></table></figure>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Files_2022-05-18_17-47-11.png" alt="Files"/></div><div class="image-meta"><span class="image-caption center">Files</span></div></div></div></div></div>
+
+
+<h2 id="计蒙——数采仪段接线颜色及四根线对应的含义"><a href="#计蒙——数采仪段接线颜色及四根线对应的含义" class="headerlink" title="计蒙——数采仪段接线颜色及四根线对应的含义"></a>计蒙——数采仪段接线颜色及四根线对应的含义</h2><p>按照如下图所示接线颜色一一对应即可。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Status_2022-06-06_16-42-25.png" alt="Wire" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">Wire</span></div></div>
+
+
+<h2 id="数采仪内部工作指示灯"><a href="#数采仪内部工作指示灯" class="headerlink" title="数采仪内部工作指示灯"></a>数采仪内部工作指示灯</h2><p>数采仪内部带指示灯模块有：RS485模块、树莓派模块。（有个别数采仪的电源管理模块也有指示灯）</p>
+<div class="tag-plugin tabs" align="center"id="tab_4""><ul class="nav-tabs"><li class="tab active"><a href="#tab_4-1">RS485模块</a></li><li class="tab"><a href="#tab_4-2">树莓派模块</a></li><li class="tab"><a href="#tab_4-3">电源管理模块</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_4-1"><details class="tag-plugin folding" ><summary><span>RS485模块工作指示灯共有三个：1个红色电源供电指示灯，2个红色信号传输指示灯。如下图所示</span></summary><div class="body"><p>计蒙在正常工作状态下，RS485模块电源指示灯常亮，两个信号传输指示灯间断闪烁，闪烁频率不定。<br>如果电源指示灯不亮，数采仪其他指示灯正常，说明此RS485模块损坏。<br>如果电源指示灯正常，信号传输指示灯不闪烁，说明数采仪没有与计蒙端交互，计蒙内部可能出现异常。</p></div></details>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Rs485LampChange_2022-05-18_14-13-22.png" alt="RS485模块" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">RS485模块</span></div></div></div><div class="tab-pane" id="tab_4-2"><details class="tag-plugin folding" ><summary><span>树莓派模块工作指示灯共有两个：1个红色电源供电指示灯，1个黄绿色状态指示灯。如下图所示</span></summary><div class="body"><p>计蒙在正常工作状态下，树莓派模块电源指示灯常亮，状态指示灯闪烁，闪烁频率和时间不定。<br>电源指示灯正常情况下常亮，表示电源正常供电。如果不亮则表明电源供电出现问题（如工作电流太小，USB口挂载大功率设备，树莓派负载功率大等）<br>状态指示灯正常情况下闪烁，闪烁频率不定，表示正在读取内存卡中内容。如果长时间不闪烁或者上电不闪烁，则树莓派系统本身可能出现问题。</p></div></details>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="RaspberryLampChange_2022-05-18_14-15-43.png" alt="树莓派模块" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">树莓派模块</span></div></div></div><div class="tab-pane" id="tab_4-3"><p>个别数采仪中的电源管理模块会有一个蓝色的供电指示灯，常亮。<br>如果不亮则证明电源管理模块异常。</p></div></div></div>
+
+
+<h2 id="树莓派常用的指令-–持续更新中"><a href="#树莓派常用的指令-–持续更新中" class="headerlink" title="树莓派常用的指令 –持续更新中"></a>树莓派常用的指令 –持续更新中</h2><div class="tag-plugin timeline"><div class="timenode" item="1"><div class="header"><p>2022 年 5 月 18 日</p></div><div class="body fs14"><p>更新三个指令： <mark class="tag-plugin mark" color="light">ls</mark> 、 <mark class="tag-plugin mark" color="light">cd</mark> 、 <mark class="tag-plugin mark" color="light">tail</mark></p><div class="tag-plugin tabs" align="left"id="tab_5""><ul class="nav-tabs"><li class="tab active"><a href="#tab_5-1">ls</a></li><li class="tab"><a href="#tab_5-2">cd</a></li><li class="tab"><a href="#tab_5-3">tail</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_5-1"><p>ls - 显示指定工作目录下之内容（列出目前工作目录所含之文件及子目录)</p><p><strong>语法：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls [-alrt] [dirName]</span><br></pre></td></tr></table></figure><ul><li>-a 显示所有文件及目录 (. 开头的隐藏文件也会列出)</li><li>-l 除文件名称外，亦将文件型态、权限、拥有者、文件大小等资讯详细列出</li><li>-r 将文件以相反次序显示(原定依英文字母次序)</li><li>-t 将文件依建立时间之先后次序列出</li><li>dirName 目标路径</li></ul><p><strong>举例：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ls  #查看当前路径下内容</span><br><span class="line"></span><br><span class="line">ls -l #详细查看当前路径下内容</span><br><span class="line"></span><br><span class="line">ls tsimen-device/ #查看 tsimen-device 文件夹下内容</span><br></pre></td></tr></table></figure><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Ls[]_2022-06-14_15-59-44.png" alt="Ls_example"/></div><div class="image-meta"><span class="image-caption center">Ls_example</span></div></div></div><div class="tab-pane" id="tab_5-2"><p>cd - 切换当前工作目录</p><p><strong>语法：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd [dirName]</span><br></pre></td></tr></table></figure><ul><li>dirName: 要切换的目标路径</li></ul><p><strong>举例：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd tsimen-device/ #进入 tismen-device 文件夹，这里的路径为相对路径</span><br><span class="line"></span><br><span class="line">cd /home/pi/tsimen-device/py/data/log/  #进入 log 文件夹，这里的路径为绝对路径</span><br></pre></td></tr></table></figure><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Cd[]_2022-06-14_16-10-55.png" alt="Cd_example"/></div><div class="image-meta"><span class="image-caption center">Cd_example</span></div></div></div><div class="tab-pane" id="tab_5-3"><p>tail - 查看文件的内容，多使用 <mark class="tag-plugin mark" >-f</mark> 参数查阅正在改变的日志文件</p><p><strong>语法：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail [-fn] [Name] </span><br></pre></td></tr></table></figure><ul><li>-f 循环读取，实时读取。</li><li>-n &lt;行数&gt; 显示文件的尾部 n 行内容</li><li>Name 文件名</li></ul><p><strong>举例：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tail -n 15 tsimen<span class="emphasis">_2022-06-13.log</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">tail -f tsimen_</span>2022-06-14.logs  </span><br></pre></td></tr></table></figure><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Tail[]_2022-06-14_16-21-40.png" alt="Tail_example"/></div><div class="image-meta"><span class="image-caption center">Tail_example</span></div></div></div></div></div></div></div><div class="timenode" item="2"><div class="header"><p>2022 年 6 月 10 日</p></div><div class="body fs14"><p>更新指令： <mark class="tag-plugin mark" color="light">cp</mark></p><p>cp - 复制文件或目录</p><p><strong>语法：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp [-rf] [source] [directory]</span><br></pre></td></tr></table></figure><ul><li>-r 若给出的源文件是一个目录文件，此时将复制该目录下所有的子目录和文件。</li><li>-f 覆盖已经存在的目标文件而不给出提示（强制复制不提示）。</li><li>source 源文件&#x2F;源文件目录</li><li>directory 目标路径&#x2F;目标文件</li></ul><p><strong>举例：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp ./shells.sh newfolder/xxx.sh</span><br><span class="line"></span><br><span class="line">cp -r newfolder/ oldfolder/</span><br></pre></td></tr></table></figure><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Cp[1]_2022-06-14_16-41-22.png"/></div></div><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Cp[2]_2022-06-14_16-42-31.png" alt="Cp_example"/></div><div class="image-meta"><span class="image-caption center">Cp_example</span></div></div></div></div><div class="timenode" item="3"><div class="header"><p>2022 年 6 月 14 日</p></div><div class="body fs14"><p>更新指令： <mark class="tag-plugin mark" color="light">mkdir</mark> 、 <mark class="tag-plugin mark" color="light">pwd</mark></p><div class="tag-plugin tabs" align="left"id="tab_6""><ul class="nav-tabs"><li class="tab active"><a href="#tab_6-1">mkdir</a></li><li class="tab"><a href="#tab_6-2">pwd</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_6-1"><p>mkdir - 创建目录</p><p><strong>语法：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir [-p] [dirName]</span><br></pre></td></tr></table></figure><ul><li>-p 确保目录名称存在，不存在的就建一个。</li><li>dirName 文件夹名</li></ul><p><strong>举例：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir NewFolder</span><br></pre></td></tr></table></figure><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Mkdir[]_2022-06-14_16-53-43.png" alt="Mkdir_example"/></div><div class="image-meta"><span class="image-caption center">Mkdir_example</span></div></div></div><div class="tab-pane" id="tab_6-2"><p>pwd - 显示当前工作目录</p><p><strong>语法：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd</span><br></pre></td></tr></table></figure><p><strong>举例：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd</span><br></pre></td></tr></table></figure><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Pwd[]_2022-06-14_16-57-26.png" alt="Pwd_example"/></div><div class="image-meta"><span class="image-caption center">Pwd_example</span></div></div></div></div></div></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/06/13/%E6%96%87%E7%AB%A0%E4%BF%AE%E9%A5%B0%E6%A0%87%E7%AD%BE%E9%9B%86%E5%90%88/">文章修饰标签集合<span class="note">较早</span></a><div class="line"></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<p>本站由 <a href="http://example.com/">@HaoYu Liu</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a> 作为主题。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@ 6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
